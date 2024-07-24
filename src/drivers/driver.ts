@@ -1,5 +1,5 @@
 export const getDriver = async (driver: string, options: Config): Promise<Driver> => {
-    const { connectDriver }: { connectDriver: ConnectDriver } = await import(`./${driver}`)
+    const { connectDriver }: { connectDriver: ConnectDriver } = await import(`./${driver}.ts`)
     return connectDriver(options)
 }
 
