@@ -1,0 +1,40 @@
+{
+  "name": "sql-migrator-cli",
+  "version": "0.0.1",
+  "description": "sql-migrator-cli",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "build": "tsup"
+  },
+  "keywords": [
+    "sql-migrator-cli",
+    "cli",
+    "sql",
+    "pg",
+    "postgres",
+    "postgresql",
+    "database",
+    "db",
+    "migrator",
+    "migrate",
+    "migration"
+  ],
+  "author": "William Shuppert",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "@types/pg": "^8.11.6",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.2.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "pg": "^8.12.0",
+    "zod": "^3.23.8"
+  }
+}
