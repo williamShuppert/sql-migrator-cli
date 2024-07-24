@@ -41,3 +41,43 @@ Commands:
   check [options] [table]  check status of migrations
   help [command]           display help for command
 ```
+
+## Example
+Install sql-migrator-cli globally:
+```shell
+npm i -g sql-migrator-cli
+```
+
+Use the appropriate flags or simply add a config file (default is "migrations.json", you can change this with the -c or --config flag). You can also pass environment variables to the json file!
+```json
+{
+  "driver": "pg",
+  "database": "my_database",
+  "host": "localhost",
+  "password": { "env": "DB_PASSWORD" },
+  "port": 5432,
+  "user": "user",
+  "table": "migrations",
+  "migrationsDir": "./migrations"
+}
+```
+
+Generate migration files, then write your SQL:
+```shell
+sql-migrator gen my-first-migration
+```
+
+Create a database with migrations table:
+```shell
+sql-migrator db create
+```
+
+Run migrations:
+```shell
+sql-migrator db up
+```
+
+No config json file, no problem:
+```shell
+sql-migrator db -d pg -db my_database --host localhost -p 5432 -pw supersecret -u postgres up migrations_table -f ./migration-files
+```
