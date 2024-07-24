@@ -7,6 +7,8 @@ import fs from 'fs'
 import path from 'path'
 import { Driver } from './drivers/driver'
 import { getUntrackedMigrations, plural } from './functions'
+import * as pack from '../package.json'
+
 
 // Save driver state between subprograms
 let driver: Driver | undefined
@@ -51,7 +53,7 @@ for (let key in configDefaults) {
 program
     .name("sql-migrator-cli")
     .description("")
-    .version(process.env.npm_package_version!)
+    .version(pack.version)
     .option("-e, --env <path>", "environment path", ".env")
     .option("-c, --config <path>", "config path", "migrations.json")
 

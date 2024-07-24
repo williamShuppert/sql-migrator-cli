@@ -1,13 +1,13 @@
 {
-  "name": "sql-migrator-cli",
+  "name": "sql-migrator-cli-test",
   "version": "0.0.1",
   "description": "sql-migrator-cli",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "bin": { 
-    "sql-migrator-cli": "./index.mjs",
-    "sql-migrator": "./index.mjs" 
+  "bin": {
+    "sql-migrator-cli": "./dist/index.js",
+    "sql-migrator": "./dist/index.js"
   },
   "repository": {
     "type": "git",
