@@ -1,6 +1,8 @@
 # sql-migrator-cli
 A quick and simple command-line interface (CLI) tool for managing database migrations, supporting different database systems. This CLI tool also allows you to generate, apply, and revert database migrations while providing a command to create a new database if needed.
 
+What makes this different from db-migrate or sequelize migrations? This program focuses on using only pure SQL files while avoiding adding any extra javascript files into your project. This allows you to practice writing with SQL while still having an easy way to handle migrations without the extra javascript clutter that other libraries require. While removing js and using only SQL files keeps it simple and good for learning, it doesn't provide a way to easily transfer from one database dialect to another (e.g. MySQL to PostgreSQL).
+
 ## Usage
 ```
 Usage: sql-migrator-cli [options] [command]
