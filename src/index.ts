@@ -92,7 +92,7 @@ program
 const db = program.command("db")
     .description("sets up a database connection")
     .option("-d, --driver <name>", "database driver", config.driver)
-    .option("-url <value>", "database connection url", config.url)
+    .option("--url <value>", "database connection url", config.url)
     .option("--host <name>", "database host", config.host)
     .option("-p, --port <value>", "database port", config.port)
     .option("-db, --database <name>", "database name", config.database)
